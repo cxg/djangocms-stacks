@@ -5,7 +5,7 @@ from django.utils.translation import ugettext_lazy as _
 from cms.plugin_rendering import render_plugins
 from stacks.fields import StackSearchField
 from stacks.models import StackLink, Stack
-from cms.plugins.utils import get_plugins
+from cms.utils.plugins import get_plugins
 from django.conf import settings
 
 

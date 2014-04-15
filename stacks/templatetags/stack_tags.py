@@ -3,7 +3,7 @@ from classytags.core import Tag, Options
 from django import template
 from django.utils.safestring import mark_safe
 from cms.plugin_rendering import render_plugins
-from cms.plugins.utils import get_plugins
+from cms.utils.plugins import get_plugins
 from stacks import models as stack_models
 from stacks.models import Stack
 
