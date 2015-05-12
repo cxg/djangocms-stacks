@@ -1,11 +1,11 @@
 from cms.utils import get_language_from_request
 from django.contrib import admin
 from stacks.models import Stack
-from cms.admin.placeholderadmin import PlaceholderAdmin
+from cms.admin.placeholderadmin import PlaceholderAdminMixin
 from django.conf import settings
 
 
-class StackAdmin(PlaceholderAdmin):
+class StackAdmin(PlaceholderAdminMixin, admin.ModelAdmin):
     list_display = ('name', 'code',)
     search_fields = ('name', 'code',)
 
