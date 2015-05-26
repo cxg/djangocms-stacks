@@ -33,7 +33,7 @@ class StackNode(Tag):
         # TODO: once we drop 2.3.x support we can just use the "render_plugin" templatetag
         #       instead of rendering html here.
         placeholder = stack.content
-        plugins = get_plugins(context['request'], placeholder)
+        plugins = get_plugins(context['request'], placeholder, template=None)
         processors = ()
         rendered_placeholder = mark_safe("".join(render_plugins(plugins, context, placeholder, processors)))
         if varname:
