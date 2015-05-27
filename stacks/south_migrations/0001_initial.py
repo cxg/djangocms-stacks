@@ -63,7 +63,7 @@ class Migration(SchemaMigration):
             'name': ('django.db.models.fields.CharField', [], {'default': "''", 'max_length': '255', 'blank': 'True'})
         },
         u'stacks.stacklink': {
-            'Meta': {'object_name': 'StackLink', 'db_table': "u'cmsplugin_stacklink'", '_ormbases': ['cms.CMSPlugin']},
+            'Meta': {'object_name': 'StackLink', '_ormbases': ['cms.CMSPlugin']},
             u'cmsplugin_ptr': ('django.db.models.fields.related.OneToOneField', [], {'to': "orm['cms.CMSPlugin']", 'unique': 'True', 'primary_key': 'True'}),
             'stack': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['stacks.Stack']"})
         }
